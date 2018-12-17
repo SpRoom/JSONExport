@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		01ACC24B1FBB42E300C410C2 /* Swift-Codable.json in Resources */ = {isa = PBXBuildFile; fileRef = 01ACC24A1FBB42E300C410C2 /* Swift-Codable.json */; };
 		166AF5CE1CEF6C3600516EDD /* Swift-Struct-Gloss.json in Resources */ = {isa = PBXBuildFile; fileRef = 166AF5CD1CEF6C3600516EDD /* Swift-Struct-Gloss.json */; };
+		56B3F19A21C7BFA100A139BE /* SwiftyJSON-SNSwiftPackage.json in Resources */ = {isa = PBXBuildFile; fileRef = 56B3F19921C7BFA100A139BE /* SwiftyJSON-SNSwiftPackage.json */; };
 		608896441CF278440074CB80 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608896431CF278440074CB80 /* Author.swift */; };
 		60FB8FF01B9B361600290979 /* Java-Android Realm.json in Resources */ = {isa = PBXBuildFile; fileRef = 60FB8FE61B9B361600290979 /* Java-Android Realm.json */; };
 		60FB8FF11B9B361600290979 /* Java-Android.json in Resources */ = {isa = PBXBuildFile; fileRef = 60FB8FE71B9B361600290979 /* Java-Android.json */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		01ACC24A1FBB42E300C410C2 /* Swift-Codable.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Swift-Codable.json"; path = "Supported Languages/Swift-Codable.json"; sourceTree = "<group>"; };
 		166AF5CD1CEF6C3600516EDD /* Swift-Struct-Gloss.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Swift-Struct-Gloss.json"; path = "Supported Languages/Swift-Struct-Gloss.json"; sourceTree = "<group>"; };
+		56B3F19921C7BFA100A139BE /* SwiftyJSON-SNSwiftPackage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "SwiftyJSON-SNSwiftPackage.json"; sourceTree = "<group>"; };
 		608896431CF278440074CB80 /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		60FB8FE61B9B361600290979 /* Java-Android Realm.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Java-Android Realm.json"; path = "Supported Languages/Java-Android Realm.json"; sourceTree = "<group>"; };
 		60FB8FE71B9B361600290979 /* Java-Android.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Java-Android.json"; path = "Supported Languages/Java-Android.json"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		E2F07E8A1A0B3192004A1DAA /* Supported Languages */ = {
 			isa = PBXGroup;
 			children = (
+				56B3F19921C7BFA100A139BE /* SwiftyJSON-SNSwiftPackage.json */,
 				E24E443021AA12B800435FE7 /* Swift-Outlaw.json */,
 				E24E443121AA12B800435FE7 /* Swift3-Mappable.json */,
 				166AF5CD1CEF6C3600516EDD /* Swift-Struct-Gloss.json */,
@@ -296,6 +299,7 @@
 				01ACC24B1FBB42E300C410C2 /* Swift-Codable.json in Resources */,
 				60FB8FF51B9B361600290979 /* Swift-Class.json in Resources */,
 				60FB8FF01B9B361600290979 /* Java-Android Realm.json in Resources */,
+				56B3F19A21C7BFA100A139BE /* SwiftyJSON-SNSwiftPackage.json in Resources */,
 				A329A7ED1D5DA1ED00FB59E8 /* Java-Android Gson.json in Resources */,
 				60FB8FF31B9B361600290979 /* ObjectiveC-iOS.json in Resources */,
 				60FB8FFC1B9B3F6400290979 /* ObjectiveC-Realm.json in Resources */,
