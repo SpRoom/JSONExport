@@ -64,11 +64,10 @@
                          "void",
                          "volatile",
                          "while",
-                         "class",
                          "description"
                          ],
     "booleanGetter": "",
-    "briefDescription": "Defines how your JSON objects can be mapped to Swift classes using the SwiftyJSON library",
+    "briefDescription": "Defines how your JSON objects can be mapped to Swift structures using the SwiftyJSON library",
     "utilityMethods": [
                        {
                        "forEachProperty": "\t\tif <!VarName!> != nil{\n\t\t\tdictionary[\"<!JsonKeyName!>\"] = <!VarName!>\n\t\t}\n",
@@ -79,28 +78,6 @@
                        "returnStatement": "\t\treturn dictionary\n",
                        "body": "\t\tvar dictionary = [String:Any]()\n",
                        "comment": "\t/**\n\t * Returns all the available property values in the form of [String:Any] object where the key is the approperiate json key and the value is the value of the corresponding property\n\t */\n",
-                       "bodyStart": "\n\t{\n"
-                       },
-                       {
-                       "forEachProperty": "         <!VarName!> = aDecoder.decodeObject(forKey: \"<!JsonKeyName!>\") as? <!VarType!>\n",
-                       "bodyEnd": "\n\t}\n",
-                       "signature": "    @objc required init(coder aDecoder: NSCoder)",
-                       "forEachCustomTypeProperty": "         <!VarName!> = aDecoder.decodeObject(forKey: \"<!JsonKeyName!>\") as? <!VarType!>\n",
-                       "forEachArrayOfCustomTypeProperty": "         <!VarName!> = aDecoder.decodeObject(forKey: \"<!JsonKeyName!>\") as? <!VarType!>\n",
-                       "returnStatement": "",
-                       "body": "",
-                       "comment": "\n    /**\n    * NSCoding required initializer.\n    * Fills the data from the passed decoder\n    */\n",
-                       "bodyStart": "\n\t{\n"
-                       },
-                       {
-                       "forEachProperty": "\t\tif <!VarName!> != nil{\n\t\t\taCoder.encode(<!VarName!>, forKey: \"<!JsonKeyName!>\")\n\t\t}\n",
-                       "bodyEnd": "\n\t}\n",
-                       "signature": "    func encode(with aCoder: NSCoder)",
-                       "forEachCustomTypeProperty": "\t\tif <!VarName!> != nil{\n\t\t\taCoder.encode(<!VarName!>, forKey: \"<!JsonKeyName!>\")\n\t\t}\n",
-                       "forEachArrayOfCustomTypeProperty": "\t\tif <!VarName!> != nil{\n\t\t\taCoder.encode(<!VarName!>, forKey: \"<!JsonKeyName!>\")\n\t\t}\n",
-                       "returnStatement": "",
-                       "body": "",
-                       "comment": "\n    /**\n    * NSCoding required method.\n    * Encodes mode properties into the decoder\n    */\n",
                        "bodyStart": "\n\t{\n"
                        }
                        ],
@@ -126,12 +103,12 @@
                      "bodyEnd": "\t}\n",
                      "fetchBasicTypePropertyFromMap": "",
                      "signature": "\tinit?(jsonData: JSON)",
-                     "fetchArrayOfCustomTypePropertyFromMap": "\t\t<!VarName!> = <!VarType!>()\n\t\tlet <!VarName!>Array = jsonData[\"<!JsonKeyName!>\"].arrayValue\n\t\tfor <!VarName!>Json in <!VarName!>Array{\n\t\t\tlet value = <!ElementType!>(fromJson: <!VarName!>Json)\n\t\t\t<!VarName!>.append(value)\n\t\t}\n",
+                     "fetchArrayOfCustomTypePropertyFromMap": "\t\t<!VarName!> = <!VarType!>()\n\t\tlet <!VarName!>Array = jsonData[\"<!JsonKeyName!>\"].arrayValue\n\t\tfor <!VarName!>Json in <!VarName!>Array{\n\t\t\tlet value = <!ElementType!>(jsonData: <!VarName!>Json)\n\t\t\t<!VarName!>.append(value)\n\t\t}\n",
                      "comment": "\t/**\n\t * Instantiate the instance using the passed json values to set the properties values\n\t */\n",
-                     "fetchCustomTypePropertyFromMap": "\t\tlet <!VarName!>Json = jsonData[\"<!JsonKeyName!>\"]\n\t\tif !<!VarName!>Json.isEmpty{\n\t\t\t<!VarName!> = <!VarType!>(fromJson: <!VarName!>Json)\n\t\t}\n"
+                     "fetchCustomTypePropertyFromMap": "\t\tlet <!VarName!>Json = jsonData[\"<!JsonKeyName!>\"]\n\t\tif !<!VarName!>Json.isEmpty{\n\t\t\t<!VarName!> = <!VarType!>(jsonData: <!VarName!>Json)\n\t\t}\n"
                      }
                      ],
-    "modelDefinition": "\nclass <!ModelName!>",
+    "modelDefinition": "\nstruct <!ModelName!> : SNSwiftyJSONAble",
     "genericType": "AnyObject",
     "getter": "",
     "setter": "",
@@ -147,7 +124,7 @@
                                            "AnyObject"
                                            ],
     "arrayType": "[<!ElementType!>]",
-    "modelDefinitionWithParent": "\n\nclass <!ModelName!> : <!ParentClass!>",
+    "modelDefinitionWithParent": "\n\nstruct <!ModelName!> : <!ParentClass!>",
     "instanceVarDefinition": "\tvar <!VarName!> : <!VarType!>!\n",
     "supportsFirstLineStatement": "false",
     "modelEnd": "\n}",
