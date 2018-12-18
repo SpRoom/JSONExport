@@ -99,7 +99,7 @@
                      {
                      "fetchArrayOfBasicTypePropertyFromMap": "\t\t<!VarName!> = <!VarType!>()\n\t\tlet <!VarName!>Array = jsonData[\"<!JsonKeyName!>\"].arrayValue\n\t\tfor <!VarName!>Json in <!VarName!>Array{\n\t\t\t<!VarName!>.append(<!VarName!>Json.<!VarBasicTypeReplacement!>)\n\t\t}\n",
                      "fetchBasicTypeWithSpecialNeedsPropertyFromMap": "\t\t<!VarName!> = jsonData[\"<!JsonKeyName!>\"].<!VarBasicTypeReplacement!>\n",
-                     "bodyStart": "{\n\t\tif json.isEmpty{\n\t\t\treturn\n\t\t}\n",
+                     "bodyStart": "{\n\t\tif jsonData.isEmpty{\n\t\t\treturn\n\t\t}\n",
                      "bodyEnd": "\t}\n",
                      "fetchBasicTypePropertyFromMap": "",
                      "signature": "\tinit?(jsonData: JSON)",
@@ -129,5 +129,9 @@
     "supportsFirstLineStatement": "false",
     "modelEnd": "\n}",
     "staticImports": "import Foundation \nimport SwiftyJSON \nimport SNSwiftPackage",
-    "langName": "Swift"
+    "langName": "Swift",
+    "author" : {
+        "name" : "spectatorNan",
+        "website" : "https://github.com/spectatorNan"
+    }
 }
