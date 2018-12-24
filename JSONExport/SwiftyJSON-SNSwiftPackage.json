@@ -1,5 +1,5 @@
 {
-    "modelStart": "{\n",
+    "modelStart": "\t{\n",
     "basicTypesWithSpecialFetchingNeedsReplacements": [
                                                        "intValue",
                                                        "boolValue",
@@ -72,12 +72,12 @@
                        {
                        "forEachProperty": "\t\tif <!VarName!> != nil{\n\t\t\tdictionary[\"<!JsonKeyName!>\"] = <!VarName!>\n\t\t}\n",
                        "bodyEnd": "\t}\n",
-                       "signature": "\tfunc toDictionary() -> [String:Any]",
+                       "signature": "\tfunc toDictionary() -> [String: \t Any]",
                        "forEachCustomTypeProperty": "\t\tif <!VarName!> != nil{\n\t\t\tdictionary[\"<!JsonKeyName!>\"] = <!VarName!>.toDictionary()\n\t\t}\n",
-                       "forEachArrayOfCustomTypeProperty": "\t\tif <!VarName!> != nil{\n\t\t\tvar dictionaryElements = [[String:Any]]()\n\t\t\tfor <!VarName!>Element in <!VarName!> {\n\t\t\t\tdictionaryElements.append(<!VarName!>Element.toDictionary())\n\t\t\t}\n\t\t\tdictionary[\"<!JsonKeyName!>\"] = dictionaryElements\n\t\t}\n",
+                       "forEachArrayOfCustomTypeProperty": "\t\tif <!VarName!> != nil\t{\n\t\t\tvar dictionaryElements = [[String:\tAny]]()\n\t\t\tfor <!VarName!>Element in <!VarName!> {\n\t\t\t\tdictionaryElements.append(<!VarName!>Element.toDictionary())\n\t\t\t}\n\t\t\tdictionary[\"<!JsonKeyName!>\"] = dictionaryElements\n\t\t}\n",
                        "returnStatement": "\t\treturn dictionary\n",
-                       "body": "\t\tvar dictionary = [String:Any]()\n",
-                       "comment": "\t/**\n\t * Returns all the available property values in the form of [String:Any] object where the key is the approperiate json key and the value is the value of the corresponding property\n\t */\n",
+                       "body": "\t\tvar dictionary = [String:\tAny]()\n",
+                       "comment": "\t/**\n\t * Returns all the available property values in the form of [String:\tAny] object where the key is the approperiate json key and the value is the value of the corresponding property\n\t */\n",
                        "bodyStart": "\n\t{\n"
                        }
                        ],
@@ -99,16 +99,16 @@
                      {
                      "fetchArrayOfBasicTypePropertyFromMap": "\t\t<!VarName!> = <!VarType!>()\n\t\tlet <!VarName!>Array = jsonData[\"<!JsonKeyName!>\"].arrayValue\n\t\tfor <!VarName!>Json in <!VarName!>Array{\n\t\t\t<!VarName!>.append(<!VarName!>Json.<!VarBasicTypeReplacement!>)\n\t\t}\n",
                      "fetchBasicTypeWithSpecialNeedsPropertyFromMap": "\t\t<!VarName!> = jsonData[\"<!JsonKeyName!>\"].<!VarBasicTypeReplacement!>\n",
-                     "bodyStart": "{\n\t\tif jsonData.isEmpty{\n\t\t\treturn\n\t\t}\n",
+                     "bodyStart": "{\n\t\tif jsonData.isEmpty\t{\n\t\t\treturn\n\t\t}\n",
                      "bodyEnd": "\t}\n",
                      "fetchBasicTypePropertyFromMap": "",
-                     "signature": "\tinit?(jsonData: JSON)",
+                     "signature": "\tinit?(jsonData: JSON)\t",
                      "fetchArrayOfCustomTypePropertyFromMap": "\t\t<!VarName!> = <!VarType!>()\n\t\tlet <!VarName!>Array = jsonData[\"<!JsonKeyName!>\"].arrayValue\n\t\tfor <!VarName!>Json in <!VarName!>Array{\n\t\t\tlet value = <!ElementType!>(jsonData: <!VarName!>Json)\n\t\t\t<!VarName!>.append(value)\n\t\t}\n",
                      "comment": "\t/**\n\t * Instantiate the instance using the passed json values to set the properties values\n\t */\n",
                      "fetchCustomTypePropertyFromMap": "\t\tlet <!VarName!>Json = jsonData[\"<!JsonKeyName!>\"]\n\t\tif !<!VarName!>Json.isEmpty{\n\t\t\t<!VarName!> = <!VarType!>(jsonData: <!VarName!>Json)\n\t\t}\n"
                      }
                      ],
-    "modelDefinition": "\nstruct <!ModelName!> : SNSwiftyJSONAble",
+    "modelDefinition": "\nstruct <!ModelName!>: SNSwiftyJSONAble",
     "genericType": "AnyObject",
     "getter": "",
     "setter": "",
@@ -124,8 +124,8 @@
                                            "AnyObject"
                                            ],
     "arrayType": "[<!ElementType!>]",
-    "modelDefinitionWithParent": "\n\nstruct <!ModelName!> : <!ParentClass!>",
-    "instanceVarDefinition": "\tvar <!VarName!> : <!VarType!>!\n",
+    "modelDefinitionWithParent": "\n\nstruct <!ModelName!>: <!ParentClass!>",
+    "instanceVarDefinition": "\tvar <!VarName!>: <!VarType!>!\n",
     "supportsFirstLineStatement": "false",
     "modelEnd": "\n}",
     "staticImports": "import Foundation \nimport SwiftyJSON \nimport SNSwiftPackage",
