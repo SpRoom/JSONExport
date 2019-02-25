@@ -146,6 +146,15 @@
                                            "String",
                                            "AnyObject"
                                            ],
+    "basicTypesWithSpecialFetchingNeedsTypeCast" : [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
     "arrayType": "[<!ElementType!>]",
     "modelDefinitionWithParent": "\n\nclass <!ModelName!> : <!ParentClass!>",
     "instanceVarDefinition": "\tvar <!VarName!> : <!VarType!>!\n",
