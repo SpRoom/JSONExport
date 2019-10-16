@@ -109,7 +109,7 @@
                      }
                      ],
     "modelDefinition": "\nstruct <!ModelName!>: SNSwiftyJSONAble",
-    "genericType": "AnyObject",
+    "genericType": "String",
     "getter": "",
     "setter": "",
     "displayLangName": "SwiftyJSON - SNSwiftPackage",
