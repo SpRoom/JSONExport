@@ -99,7 +99,7 @@
     "basicTypesWithSpecialFetchingNeeds": [
     ],
     "displayLangName": "Swift - HandyJSON",
-    "instanceVarDefinition": "\tvar <!JsonKeyName!> : <!VarType!> = <!JsonValueName!>\n",
+    "instanceVarDefinition": "\t///\n\tvar <!JsonKeyName!> : <!VarType!> = <!JsonValueName!>\n",
     "supportsFirstLineStatement": "false",
     "modelEnd": "\n}",
     "staticImports": "import HandyJSON",
