@@ -110,6 +110,14 @@ class Property : Equatable{
         string = string.replacingOccurrences(of: varType, with: type)
         string = string.replacingOccurrences(of: varName, with: nativeName)
         string = string.replacingOccurrences(of: jsonKeyName, with: jsonName)
+        if let dataTypeZeros = lang.dataTypeZeros {
+            if let zeroValue = dataTypeZeros[type] {
+                string = string.replacingOccurrences(of: jsonValueName, with: zeroValue)
+            } else {
+                string = string.replacingOccurrences(of: jsonValueName, with: "\"\"")
+            }
+        }
+        
         return string
     }
     
