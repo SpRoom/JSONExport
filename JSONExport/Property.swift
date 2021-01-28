@@ -114,7 +114,11 @@ class Property : Equatable{
             if let zeroValue = dataTypeZeros[type] {
                 string = string.replacingOccurrences(of: jsonValueName, with: zeroValue)
             } else {
+                if type.hasPrefix("[") {
+                    string = string.replacingOccurrences(of: jsonValueName, with: "[]")
+                } else {
                 string = string.replacingOccurrences(of: jsonValueName, with: "\"\"")
+                }
             }
         }
         
